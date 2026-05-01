@@ -33,3 +33,14 @@ push (dataref,{
    alamat.value="";
    ttl.value=";"
 };
+
+onValue(dataref, snap => {
+  daftar.innerHTML = "";
+  snap.forEach(h=> {
+     const data = h.val();
+    daftar.innerHTML +=`<li>${data.nama}</li>
+    <li>${data.alamat}</li>
+     <li>${data.ttl}</li>
+    `;
+});
+});
